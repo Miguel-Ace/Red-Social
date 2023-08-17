@@ -1,0 +1,329 @@
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+*,*::before,*::after{
+    box-sizing: inherit;
+}
+body{
+    padding: 0;
+    margin: 0;
+    font-size: 1.6rem;
+    font-family: 'Kantumruy Pro', sans-serif;
+}
+p{
+    margin: 0;
+}
+img{
+    width: 100%;
+}
+
+@media (min-width: 0px) and (max-width: 767px) {
+    .contenedor{
+        // background-color: red;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        
+        .formulario{
+            box-shadow: 0px 4px 6px rgba(78, 81, 204, 0.5);
+            padding: 2rem;
+            transition: .3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #4E51CC;
+            // gap: 2rem;
+            .logo-rokbit{
+                width: 13rem;
+                position: absolute;
+                top: 1rem;
+                left: 1rem;
+            }
+            p{
+                font-size: 4rem;
+                font-family: 'Times New Roman', Times, serif;
+            }
+            form{
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+                .contenedor-inputs{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1.3rem;
+                    .inputs{
+                        display: flex;
+                        flex-direction: column;
+                        // gap: .2rem;
+                        label{
+                            opacity: .7;
+                            transform: translateY(1rem);
+                            display: flex;
+                            flex-direction: column;
+                            .text-error{
+                                color: red;
+                                font-weight: bold;
+                                margin-left: 7rem;
+                            }
+                        }
+                        input, select{
+                            border: none;
+                            border-bottom: 1px solid #4E51CC;
+                            width: 40rem;
+                            height: 2.8rem;
+                            font-size: 1.8rem;
+                            outline: none;
+                            text-align: center;
+                            &:hover{
+                                border-bottom: 1px solid #761cc3;
+                            }
+                        }
+                        textarea{
+                            max-width: 40rem;
+                            min-width: 40rem;
+                            font-size: 1.8rem;
+                            outline: none;
+                        }
+                    }
+                    .textarea{
+                        label{
+                            transform: translateY(0);
+                            display: flex;
+                            flex-direction: column;
+                            .text-error{
+                                color: red;
+                                font-weight: bold;
+                                margin-left: 7rem;
+                            }
+                        }
+                    }
+                }
+                .acciones{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    a{
+                        color: #4E51CC;
+                        text-decoration: none;
+                        font-family: 'Times New Roman', Times, serif;
+                        transition: .3s ease;
+                        &:hover{
+                            letter-spacing: .5px;
+                        }
+                    }
+                    button{
+                        border: none;
+                        background-color: #761cc3;
+                        color: white;
+                        padding: 1.5rem 5rem;
+                        font-size: 1.8rem;
+                        border-radius: 5rem;
+                        cursor: pointer;
+                        &:hover{
+                            background-color: #6416a7;
+                        }
+                        &::before{
+                            content: '';
+                            position: absolute;
+                            filter: blur(3rem);
+                            border: none;
+                            background-color: #761cc3;
+                            padding: 1.5rem 5rem;
+                            font-size: 1.8rem;
+                            border-radius: 5rem;
+                            z-index: -1;
+                        }
+                    }
+                }
+            }
+        }
+    
+        .welcome{
+            display: none;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .contenedor{
+        // background-color: red;
+        display: flex;
+        justify-content: space-between;
+        // align-items: center;
+        min-height: 100vh;
+    
+        .formulario{
+            transition: .3s ease;
+            flex: 0 0 calc(50%);
+            // background-image: url('/public/img/Diseño blanco.png');
+            // background-repeat: no-repeat;
+            // background-size: contain;
+            // background-position: center center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #4E51CC;
+            // gap: 2rem;
+            .logo-rokbit{
+                width: 13rem;
+                position: absolute;
+                top: 1rem;
+                left: 1rem;
+            }
+            p{
+                font-size: 4rem;
+                font-family: 'Times New Roman', Times, serif;
+            }
+            form{
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                .contenedor-inputs{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1rem;
+                    .inputs{
+                        display: flex;
+                        flex-direction: column;
+                        // gap: .2rem;
+                        label{
+                            opacity: .7;
+                            transform: translateY(1rem);
+                            display: flex;
+                            flex-direction: column;
+                            .text-error{
+                                color: red;
+                                font-weight: bold;
+                                margin-left: 7rem;
+                            }
+                        }
+                        input, select{
+                            border: none;
+                            border-bottom: 1px solid #4E51CC;
+                            width: 40rem;
+                            height: 2.8rem;
+                            font-size: 1.8rem;
+                            outline: none;
+                            text-align: center;
+                            &:hover{
+                                border-bottom: 1px solid #761cc3;
+                            }
+                        }
+                        textarea{
+                            max-width: 40rem;
+                            min-width: 40rem;
+                            font-size: 1.8rem;
+                            outline: none;
+                        }
+                    }
+                    .textarea{
+                        label{
+                            transform: translateY(0);
+                            display: flex;
+                            flex-direction: column;
+                            .text-error{
+                                color: red;
+                                font-weight: bold;
+                                margin-left: 7rem;
+                            }
+                        }
+                    }
+                }
+                .acciones{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    a{
+                        color: #4E51CC;
+                        text-decoration: none;
+                        font-family: 'Times New Roman', Times, serif;
+                        transition: .3s ease;
+                        &:hover{
+                            letter-spacing: .5px;
+                        }
+                    }
+                    button{
+                        border: none;
+                        background-color: #761cc3;
+                        color: white;
+                        padding: 1.5rem 5rem;
+                        font-size: 1.8rem;
+                        border-radius: 5rem;
+                        cursor: pointer;
+                        &:hover{
+                            background-color: #6416a7;
+                        }
+                        &::before{
+                            content: '';
+                            position: absolute;
+                            filter: blur(3rem);
+                            border: none;
+                            background-color: #761cc3;
+                            padding: 1.5rem 5rem;
+                            font-size: 1.8rem;
+                            border-radius: 5rem;
+                            z-index: -1;
+                        }
+                    }
+                }
+            }
+            // background-color: red;
+        }
+    
+        .welcome{
+            transition: .3s ease;
+            flex: 0 0 calc(50%);
+            background-image: url('/public/img/Diseño degradado.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            // min-height: 100%;
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+            display: flex;
+            // flex-direction: column;
+            justify-content: space-around;
+            .text-titulo{
+                font-size: 4rem;
+            }
+            ion-icon{
+                font-size: 20rem;
+                position: relative;
+                animation: animacion 2s infinite alternate;
+                @keyframes animacion {
+                    from {
+                      top: -50px; /* Posición inicial (arriba) */
+                    }
+                    to {
+                      top: -30px; /* Posición final (abajo) */
+                    }
+                }
+            }
+            .text-tienes-cuenta{
+                font-size: 2rem;
+                transform: translateY(-5rem);
+            }
+            a{
+                font-size: 5rem;
+                text-decoration: none;
+                color: white;
+                border: 1px solid white;
+                border-radius: 2rem;
+                padding: 1rem;
+                transform: translateY(-10rem);
+                &:hover{
+                    box-shadow: 0 0 10px rgba(255, 255, 255, 1);
+    
+                }
+            }
+        }
+    }
+}

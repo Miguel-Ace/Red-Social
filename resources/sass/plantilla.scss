@@ -1,0 +1,816 @@
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+*,*::before,*::after{
+    box-sizing: inherit;
+}
+body{
+    padding: 0;
+    margin: 0;
+    font-size: 1.6rem;
+    font-family: 'Kantumruy Pro', sans-serif;
+    background-image: url('https://assets.website-files.com/5c9dfb4ca9898d5290c866a1/5c9dfbe2409f8a0c35e858de_hero-wave.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    // background-color: #761cc3;
+}
+p{
+    margin: 0;
+}
+img{
+    width: 100%;
+}
+.mensajes{
+    position: fixed;
+    top: 7.6rem;
+    right: 0;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    // gap: 1rem;
+    padding: 1rem;
+    width: 28rem;
+    z-index: 1;
+    box-shadow: 0px 4px 6px rgba(78, 81, 204, 0.5);
+    transition: .3s ease;
+    transform: translateX(100%);
+    .icon-listo{
+        background-color: #16A085;
+        color: white;
+        padding: .5rem;
+        border-radius: 2rem;
+    }
+    .icon-borrar{
+        background-color: #EF5350;
+        color: white;
+        padding: .5rem;
+        border-radius: 2rem;
+    }
+    p{
+        font-weight: bold;
+    }
+}
+
+@media (min-width: 0px) and (max-width: 1100px) {
+    .desktop{
+        display: none;
+    }
+    .contenedor{
+        display: flex;
+        flex-direction: column;
+        gap: 5rem;
+    
+        header{
+            display: flex;
+            justify-content: space-between;
+            .ubicacion-logoRokbit{
+                flex: 0 0 calc(80%);
+                background-color: white;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: .5rem;
+                border-radius: 0 0 .5rem 0;
+                .logo-rokbit{
+                    width: 16rem;
+                    display: flex;
+                }
+                .ubicacion-pagina{
+                    font-size: 2rem;
+                    font-weight: bold;
+                    opacity: .5;
+                }
+            }
+            .usuario{
+                flex: 0 0 calc(20% - 1rem);
+                background-color: white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 0 0 0 .5rem;
+                .logo-empresa2{
+                    background-color: #f5f5f5;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    // gap: .5rem;
+                    img{
+                        width: 9rem;
+                    }
+                    p{
+                        font-size: 2rem;
+                        font-weight: bold;
+                        opacity: .5;
+                    }
+                }
+    
+                .btn-settins{
+                    background-color: #761cc3;
+                    border: 1px solid #4E51CC;
+                    color: white;
+                    font-size: 2rem;
+                    padding: .9rem 1.4rem;
+                    transition: .3s ease;
+                    cursor: pointer;
+                    &:hover{
+                        background-color: #4E51CC;
+                        border: 1px solid #761cc3;
+                        transform: rotate(90deg);
+                    }
+                }
+    
+                .datos-empresa{
+                    position: absolute;
+                    z-index: 1;
+                    background-color: white;
+                    width: 24rem;
+                    top: 7.7rem;
+                    right: 0;
+                    display: flex;
+                    flex-direction: column;
+                    border-radius: 0 0 0 .5rem;
+                    transform: translateY(-43rem);
+                    transition: .3s ease;
+                    border-bottom: 1px solid #4E51CC;
+                    &.oculto{
+                        transform: translateY(0);
+                    }
+                    a{
+                        text-decoration: none;
+                        padding: .8rem 1rem;
+                        font-size: 1.8rem;
+                        font-weight: bold;
+                        transition: .3s ease;
+                        display: flex;
+                        justify-content: space-between;
+                        color: #4E51CC;
+                        &:hover{
+                            background-color: #761cc3;
+                            color: white;
+                            padding-left: 2rem;
+                        }
+    
+                    }
+                    .container-catalogo{
+                        position: relative;
+                        background-color: bisque;
+                        &:hover .list-catalogo{
+                            display: block;
+                        }
+                        
+                        .list-catalogo{
+                            display: none;
+                            background-color: white;
+                            width: 20rem;
+                            position: absolute;
+                            top: 0;
+                            right: 24rem;
+                            border:1px solid #4E51CC;
+                        }
+                    }
+                }
+            }
+        }
+    
+        main{
+            .tablas-agregar{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 1rem;;
+                // background-color: red;
+                // padding: 2rem;
+                .agregar{
+                    background-color: white;
+                    width: 95%;
+                    border-radius: 1rem;
+                    box-shadow: 2px 2px 10px 5px rgba(0, 0, 0, 0.3);
+                    padding: 2rem;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2rem;
+                    position: relative;
+                    .titulo-form-agregar{
+                        padding-bottom: 1rem;
+                        text-transform: uppercase;
+                        font-weight: bold;
+                        opacity: .5;
+                        border-bottom: 1px solid #761cc3;
+                    }
+                    .cantidad-it{
+                        position: absolute;
+                        right: 4rem;
+                        top: 1rem;
+                        font-size: 3rem;
+                        color: #4E51CC;
+                        font-weight: bold;
+                    }
+                    form{
+                        // overflow: scroll;
+                        position: relative;
+                        // background-color: red;
+                        width: 100%;
+                        .contenedor-form{
+                            width: 100%;
+                            display: grid;
+                            grid-template-columns: repeat(1,1fr);
+                            gap: 2rem;
+                            div{
+                                display: flex;
+                                flex-direction: column;
+                                gap: 1rem;
+                                font-weight: bold;
+                                label{
+                                    color: #4E51CC;
+                                }
+                                input, select{
+                                    border: none;
+                                    border-bottom: 1px solid #761cc3;
+                                    font-size: 1.8rem;
+                                    outline: none;
+                                }
+                                textarea{
+                                    max-width: 100%;
+                                    min-width: 100%;
+                                    // min-height: 1rem;
+                                    // font-size: 1.8rem;
+                                    outline: none;
+                                }
+                            }
+                            .ocultar{
+                                display: none;
+                            }
+                        }
+                        button{
+                            padding: 1rem;
+                            background-color: #761cc3;
+                            color: white;
+                            border-radius: .3rem;
+                            margin-top: 2rem;
+                            border: 1px solid #4E51CC;
+                            cursor: pointer;
+                            transition: .2s ease;
+                            font-weight: bold;
+                            &:hover{
+                                color: #761cc3;
+                                background-color: white;
+                                border: 1px solid #761cc3;
+                            }
+                            &.activo{
+                                opacity: .6;
+                                cursor: no-drop;
+                                &:hover{
+                                    color: white;
+                                    background-color: #761cc3;
+                                }
+                            }
+                        }
+                        .informacion-general{
+                            display: flex;
+                            justify-content: space-around;
+                            background-color: #4E51CC;
+                            margin-top: 1rem;
+                            color: white;
+                            font-weight: bold;
+                            height: 0;
+                            padding: 0;
+                            transition: .3s ease;
+                            p{
+                                display: flex;
+                                flex-direction: column;
+                                text-align: center;
+                                gap: 1rem;
+                                transition: .3s ease;
+                                span:nth-child(2){
+                                    font-weight: 100;
+                                    border-bottom: 1px solid white;
+                                }
+                            }
+                            .span-saldo{
+                                position: absolute;
+                                top: -6rem;
+                                right: 0;
+                                font-size: 3rem;
+                                font-weight: bold;
+                                color: #761cc3;
+                            }
+                            &.activo{
+                                height: 5%;
+                                padding: 2rem;
+                            }
+                        }
+                    }
+                }
+    
+                .tabla-empresa{
+                    position: relative;
+                    background-color: white;
+                    width: 95%;
+                    border-radius: 1rem;
+                    box-shadow: 2px 2px 10px 5px rgba(0, 0, 0, 0.3);
+                    padding: 2rem;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2rem;
+                    overflow: scroll;
+                    .icon{
+                        position: absolute;
+                        top: 1rem;
+                        right: 4rem;
+                        font-size: 3rem;
+                        cursor: pointer;
+                        transition: .3s ease;
+                        &:hover{
+                            color: #4E51CC;
+                            transform: rotate(190deg);
+                            scale: 1.4;
+                        }
+                        &.rotar{
+                            transform: rotate(210deg);
+                        }
+                    }
+                    .titulo-tabla-empresa{
+                        padding-bottom: 1rem;
+                        text-transform: uppercase;
+                        font-weight: bold;
+                        opacity: .5;
+                        border-bottom: 1px solid #761cc3;
+                        display: none;
+                        width: 100rem;
+                        &.activo{
+                            display: block;
+                        }
+                    }
+                    
+                    table{
+                        display: none;
+                        width: 100rem;
+                        thead{
+                            tr th{
+                                background-color: #4E51CC;
+                                color: white;
+                                padding: .8rem;
+                                border-radius: .8rem 0 .5rem 0;
+                            }
+                        }
+                        tbody{
+                            tr td{
+                                text-align: center;
+                                border-bottom: 1px solid #761cc3;
+                                &.modificadores-icon{
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    .btn-editar{
+                                        border: none;
+                                        background-color: white;
+                                        color: #12866f;
+                                        padding: 1rem;
+                                        border-radius: .3rem;
+                                        cursor: pointer;
+                                        transition: .2s ease;
+                                        font-size: 1.8rem;
+                                        &:hover{
+                                            background-color: #12866f;
+                                            color: white;
+                                        }
+                                    }
+                                    
+                                    .btn-borrar{
+                                        margin: 0;
+                                        button{
+                                            border: none;
+                                            background-color: white;
+                                            color: #E74C3C;
+                                            padding: 1rem;
+                                            border-radius: .3rem;
+                                            cursor: pointer;
+                                            transition: .2s ease;
+                                            &:hover{
+                                                background-color: #E74C3C;
+                                                color: white;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        &.mostrarTabla{
+                            display: inline-table;
+                        }
+                    }
+                }
+            }
+        }
+    
+        footer{
+            height: 30rem;
+            background-image: url('https://assets.website-files.com/5c9dfb4ca9898d5290c866a1/5cde4fc9028c55f6030aaec2_base_wave.svg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    }
+}
+
+@media (min-width: 1101px){
+    .mobile{
+        display: none;
+    }
+    .contenedor{
+        display: flex;
+        flex-direction: column;
+        gap: 5rem;
+    
+        header{
+            display: flex;
+            justify-content: space-between;
+            .ubicacion-logoRokbit{
+                flex: 0 0 calc(80%);
+                background-color: white;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: .5rem;
+                border-radius: 0 0 .5rem 0;
+                .logo-rokbit{
+                    width: 16rem;
+                    display: flex;
+                }
+                .catalogo{
+                    display: flex;
+                    gap: 2rem;
+                    // background-color: red;
+                    a{
+                        position: relative;
+                        font-weight: bold;
+                        font-size: 1.8rem;
+                        color: #761cc3;
+                        text-decoration: none;
+                        &::before{
+                            transition: .2s ease;
+                            content: '';
+                            position: absolute;
+                            width: 100%;
+                            height: 5px;
+                            top: -5px;
+                            background-color: #4E51CC;
+                            transform: translateX(-100%);
+                            opacity: 0;
+                            z-index: -1;
+                        }
+                        &::after{
+                            transition: .2s ease;
+                            content: '';
+                            position: absolute;
+                            width: 100%;
+                            height: 5px;
+                            bottom: -5px;
+                            background-color: #4E51CC;
+                            opacity: 0;
+                            z-index: -1;
+                        }
+                        &:hover{
+                            &::before{
+                                opacity: 1;
+                                transform: translateX(0%);
+                                z-index: 1;
+                            }
+                            &::after{
+                                opacity: 1;
+                                transform: translateX(-100%);
+                                z-index: 1;
+                            }
+                        }
+                    }
+                }
+                .ubicacion-pagina{
+                    font-size: 2rem;
+                    font-weight: bold;
+                    opacity: .5;
+                }
+            }
+            .usuario{
+                flex: 0 0 calc(20% - 1rem);
+                background-color: white;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                border-radius: 0 0 0 .5rem;
+                .logo-empresa{
+                    // background-color: red;
+                    width: 7rem;
+                    display: flex;
+                    align-items: center;
+                    gap: .5rem;
+                    p{
+                        font-size: 2rem;
+                        font-weight: bold;
+                        opacity: .5;
+                    }
+                }
+    
+                .btn-settins{
+                    background-color: #761cc3;
+                    border: 1px solid #4E51CC;
+                    color: white;
+                    font-size: 2rem;
+                    padding: .9rem 1.4rem;
+                    transition: .3s ease;
+                    cursor: pointer;
+                    margin-right: 4rem;
+                    &:hover{
+                        background-color: #4E51CC;
+                        border: 1px solid #761cc3;
+                        transform: rotate(90deg);
+                    }
+                }
+    
+                .datos-empresa{
+                    position: absolute;
+                    z-index: 1;
+                    background-color: white;
+                    width: 27.8rem;
+                    top: 7.7rem;
+                    right: 0;
+                    display: flex;
+                    flex-direction: column;
+                    border-radius: 0 0 0 .5rem;
+                    transform: translateY(-40rem);
+                    transition: .3s ease;
+                    border-bottom: 1px solid #4E51CC;
+                    &.oculto{
+                        transform: translateY(0);
+                    }
+                    a{
+                        text-decoration: none;
+                        padding: .8rem 1rem;
+                        font-size: 1.8rem;
+                        font-weight: bold;
+                        transition: .3s ease;
+                        display: flex;
+                        justify-content: space-between;
+                        color: #4E51CC;
+                        &:hover{
+                            background-color: #761cc3;
+                            color: white;
+                            padding-left: 2rem;
+                        }
+    
+                    }
+                    .container-catalogo{
+                        position: relative;
+                        background-color: bisque;
+                        &:hover .list-catalogo{
+                            display: block;
+                        }
+                        
+                        .list-catalogo{
+                            display: none;
+                            background-color: white;
+                            width: 30rem;
+                            position: absolute;
+                            top: 0;
+                            right: 27.8rem;
+                            border:1px solid #4E51CC;
+                        }
+                    }
+                }
+            }
+        }
+    
+        main{
+            .tablas-agregar{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 1rem;
+                // padding: 2rem;
+                .agregar{
+                    background-color: white;
+                    width: 100rem;
+                    border-radius: 1rem;
+                    box-shadow: 2px 2px 10px 5px rgba(0, 0, 0, 0.3);
+                    padding: 2rem;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2rem;
+                    position: relative;
+                    .titulo-form-agregar{
+                        padding-bottom: 1rem;
+                        text-transform: uppercase;
+                        font-weight: bold;
+                        opacity: .5;
+                        border-bottom: 1px solid #761cc3;
+                    }
+                    .cantidad-it{
+                        position: absolute;
+                        right: 4rem;
+                        top: 1rem;
+                        font-size: 3rem;
+                        color: #4E51CC;
+                        font-weight: bold;
+                    }
+                    form{
+                        position: relative;
+                        .contenedor-form{
+                            display: grid;
+                            grid-template-columns: repeat(3,1fr);
+                            gap: 2rem;
+                            div{
+                                display: flex;
+                                flex-direction: column;
+                                gap: 1rem;
+                                font-weight: bold;
+                                label{
+                                    color: #4E51CC;
+                                }
+                                input, select{
+                                    border: none;
+                                    border-bottom: 1px solid #761cc3;
+                                    font-size: 1.8rem;
+                                    outline: none;
+                                }
+                                textarea{
+                                    max-width: 30rem;
+                                    min-width: 30rem;
+                                    // min-height: 1rem;
+                                    // font-size: 1.8rem;
+                                    outline: none;
+                                }
+                            }
+                            .ocultar{
+                                display: none;
+                            }
+                        }
+                        button{
+                            padding: 1rem;
+                            background-color: #761cc3;
+                            color: white;
+                            border-radius: .3rem;
+                            margin-top: 2rem;
+                            border: 1px solid #4E51CC;
+                            cursor: pointer;
+                            transition: .2s ease;
+                            font-weight: bold;
+                            &:hover{
+                                color: #761cc3;
+                                background-color: white;
+                                border: 1px solid #761cc3;
+                            }
+                            &.activo{
+                                opacity: .6;
+                                cursor: no-drop;
+                                &:hover{
+                                    color: white;
+                                    background-color: #761cc3;
+                                }
+                            }
+                        }
+                        .informacion-general{
+                            display: flex;
+                            justify-content: space-around;
+                            background-color: #4E51CC;
+                            margin-top: 1rem;
+                            color: white;
+                            font-weight: bold;
+                            height: 0;
+                            padding: 0;
+                            transition: .3s ease;
+                            p{
+                                display: flex;
+                                flex-direction: column;
+                                text-align: center;
+                                gap: 1rem;
+                                transition: .3s ease;
+                                span:nth-child(2){
+                                    font-weight: 100;
+                                    border-bottom: 1px solid white;
+                                }
+                            }
+                            .span-saldo{
+                                position: absolute;
+                                top: -6rem;
+                                right: 0;
+                                font-size: 3rem;
+                                font-weight: bold;
+                                color: #761cc3;
+                            }
+                            &.activo{
+                                height: 5%;
+                                padding: 2rem;
+                            }
+                        }
+                    }
+                }
+    
+                .tabla-empresa{
+                    position: relative;
+                    background-color: white;
+                    width: 100rem;
+                    border-radius: 1rem;
+                    box-shadow: 2px 2px 10px 5px rgba(0, 0, 0, 0.3);
+                    padding: 2rem;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2rem;
+                    .icon{
+                        position: absolute;
+                        top: 1rem;
+                        right: 4rem;
+                        font-size: 3rem;
+                        cursor: pointer;
+                        transition: .3s ease;
+                        &:hover{
+                            color: #4E51CC;
+                            transform: rotate(190deg);
+                            scale: 1.4;
+                        }
+                        &.rotar{
+                            transform: rotate(210deg);
+                        }
+                    }
+                    .titulo-tabla-empresa{
+                        padding-bottom: 1rem;
+                        text-transform: uppercase;
+                        font-weight: bold;
+                        opacity: .5;
+                        border-bottom: 1px solid #761cc3;
+                        display: none;
+                        &.activo{
+                            display: block;
+                        }
+                    }
+                    
+                    table{
+                        display: none;
+                        thead{
+                            tr th{
+                                background-color: #4E51CC;
+                                color: white;
+                                padding: .8rem;
+                                border-radius: .8rem 0 .5rem 0;
+                            }
+                        }
+                        tbody{
+                            tr td{
+                                text-align: center;
+                                border-bottom: 1px solid #761cc3;
+                                &.modificadores-icon{
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    .btn-editar{
+                                        border: none;
+                                        background-color: white;
+                                        color: #12866f;
+                                        padding: 1rem;
+                                        border-radius: .3rem;
+                                        cursor: pointer;
+                                        transition: .2s ease;
+                                        font-size: 1.8rem;
+                                        &:hover{
+                                            background-color: #12866f;
+                                            color: white;
+                                        }
+                                    }
+                                    
+                                    .btn-borrar{
+                                        margin: 0;
+                                        button{
+                                            border: none;
+                                            background-color: white;
+                                            color: #E74C3C;
+                                            padding: 1rem;
+                                            border-radius: .3rem;
+                                            cursor: pointer;
+                                            transition: .2s ease;
+                                            &:hover{
+                                                background-color: #E74C3C;
+                                                color: white;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        &.mostrarTabla{
+                            display: inline-table;
+                        }
+                    }
+                }
+            }
+        }
+    
+        footer{
+            height: 30rem;
+            background-image: url('https://assets.website-files.com/5c9dfb4ca9898d5290c866a1/5cde4fc9028c55f6030aaec2_base_wave.svg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    }
+}
